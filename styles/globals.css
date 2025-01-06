@@ -1,0 +1,989 @@
+/*Fuentes importadas de Google Fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Catamaran&display=swap");
+
+/*Librerías de Tailwind*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*CSS del botón "Registrase gratis" de precios*/
+
+.button {
+  display: inline-block;
+  border-radius: 7px;
+  border: none;
+  background: #174FFF;
+  color: white;
+  font-family: inherit;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0px 14px 56px -11px #1875FF;
+  width: 10em;
+  padding: 1em;
+  transition: all 0.4s;
+  cursor: pointer;
+ }
+ 
+ .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+ }
+ 
+ .button span:after {
+  content: 'gratis';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -40px;
+  transition: 0.7s;
+ }
+ 
+ .button:hover span {
+  padding-right: 2.75em;
+ }
+ 
+ .button:hover span:after {
+  opacity: 4;
+  right: 0;
+ }
+
+/*CSS para el botón del en successPay*/
+
+.bottonraro2 {
+  text-decoration: none;
+  position: absolute;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: #fff;
+  width: 9em;
+  height: 3em;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  background-size: 300%;
+  border-radius: 30px;
+  z-index: 1;
+ }
+ 
+ .bottonraro2:hover {
+  animation: ani 8s linear infinite;
+  border: none;
+ }
+ 
+ @keyframes ani {
+  0% {
+   background-position: 0%;
+  }
+ 
+  100% {
+   background-position: 400%;
+  }
+ }
+ 
+ .bottonraro2:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+ }
+ 
+ .bottonraro2:hover::before {
+  filter: blur(20px);
+ }
+ 
+ .bottonraro2:active {
+  background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+ }
+
+
+/*CSS para la animacion de carga de la biblioteca*/
+
+.loader {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  position: relative;
+}
+
+.loader:before {
+  content: '';
+  width: 48px;
+  height: 5px;
+  background: #A8BDFF;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  border-radius: 50%;
+  animation: shadow324 0.5s linear infinite;
+}
+
+.loader:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #3D6CFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  animation: jump7456 0.5s linear infinite;
+}
+
+@keyframes jump7456 {
+  15% {
+    border-bottom-right-radius: 3px;
+  }
+
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+
+  50% {
+    transform: translateY(18px) scale(1, .9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes shadow324 {
+
+  0%,
+    100% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+
+/*CSS para el botón siguiente del SE*/
+
+.bottonSig-1{
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.bottonSig-1:hover [disabled]{
+  background-color: #174FFF;
+  box-shadow: 0px 15px 20px rgba(0, 49, 200, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.bottonSig-1:active {
+  transform: translateY(-1px);
+}
+
+
+.bottonSig-2{
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.bottonSig-2:hover{
+  background-color: #174FFF;
+  box-shadow: 0px 15px 20px rgba(0, 49, 200, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.bottonSig-2:active {
+  transform: translateY(-1px);
+}
+
+.bottonAnt{
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.bottonAnt:hover{
+  background-color: #174FFF;
+  box-shadow: 0px 15px 20px rgba(0, 49, 200, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.bottonAnt:active {
+  transform: translateY(-1px);
+}
+
+
+/*CSS para el contenedor de los input*/
+
+.seccInic{
+  margin-top: 9%;
+  height: 440px;
+}
+
+.contenedorSeccionInicial{
+  height: 440px;
+}
+
+.secc0{
+  margin-top: 9%;
+  height: 440px;
+}
+
+.secc1{
+  margin-top: 9%;
+  height: 440px;
+}
+
+.secc2{
+  margin-top: 8%;
+  height: 600px;
+}
+
+.secc3{
+  margin-top: 9%;
+  height: 440px;
+}
+
+.secc4{
+  margin-top: 10%;
+  height: 700px;
+}
+
+.secc5{
+  margin-top: 9%;
+  height: 440px;
+}
+
+.secc6{
+  margin-top: 9%;
+  height: 440px;
+}
+
+.secc7{
+  margin-top: 9%;
+  height: 45%px;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+  .secc0 {
+    margin-top: 15%;
+  }
+
+  .secc1{
+    margin-top: 15%;
+  }
+
+  .secc2{
+    margin-top: 14%;
+  }
+
+  .secc3{
+    margin-top: 15%;
+  }
+
+  .secc4{
+    margin-top: 15%;
+  } 
+
+  .secc5{
+    margin-top: 15%;
+  }
+
+  .secc6{
+    margin-top: 15%;
+  }
+
+  .secc7{
+    margin-top: 15%;
+  }
+
+  .seccInic{
+    margin-top: 15%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .secc5 {
+    margin-top: 10%;
+    height: 75%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .secc0 {
+    margin-top: 20%;
+  }
+
+  .secc1 {
+    margin-top: 20%;
+  }
+
+  .secc2{
+    margin-top: 20%;
+    height: 80%;
+  }
+
+  .secc3 {
+    margin-top: 20%;
+  }
+
+  .secc4{
+    margin-top: 20%;
+    height: 85%;
+  }
+
+  .secc6{
+    margin-top: 20%;
+  }
+
+  .secc7{
+    margin-top: 20%;
+  }
+
+  .seccInic{
+    margin-top: 20%;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+  .seccInic{
+    margin-top: 30%;
+  }
+
+  .secc0 {
+    margin-top: 20%;
+    height: 80%;
+  }
+
+  .secc1 {
+    margin-top: 20%;
+    height: 80%;
+  }
+
+  .secc3 {
+    margin-top: 20%;
+    height: 70%;
+  }
+
+  .secc5 {
+    margin-top: 20%;
+    height: 85%;
+  }
+
+  .secc6{
+    margin-top: 20%;
+    height: 80%;
+  }
+
+  .secc7{
+    margin-top: 20%;
+    height: 95%;
+  }
+
+  .resp-botonComenzar{
+    margin-top: 10%;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+ 
+  .seccInic{
+    margin-top: 30%;
+  }
+
+  .secc0 {
+    margin-top: 30%;
+  }
+
+  .secc1 {
+    margin-top: 30%;
+  }
+
+  .secc2{
+    margin-top: 30%;
+    height: 85%;
+  }
+
+  .secc4{
+    margin-top: 30%;
+    
+  }
+
+  .secc3{
+    margin-top: 30%;
+    
+  }
+
+  .secc5 {
+    margin-top: 40%;
+  }
+
+  .secc6{
+    margin-top: 30%;
+  }
+
+  .resp-botonComenzar{
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .secc0 {
+    margin-top: 30%;
+    height: 85%;
+  }
+
+  .secc1 {
+    margin-top: 30%;
+    height: 85%;
+  }
+
+  .secc3 {
+    margin-top: 30%;
+    height: 78%;
+  }
+
+  .secc4{
+    margin-top: 30%;
+    height: 88%;
+  }
+
+  .secc5 {
+    margin-top: 30%;
+    height: 85%;
+  }
+
+  .secc6{
+    margin-top: 40%;
+    height: 80%;
+  }
+
+  .secc7{
+    margin-top: 30%;
+    height: 95%;
+  }
+
+  .seccInic{
+    margin-top: 35%;
+  }
+
+}
+
+/*CSS para los input radio del SE*/
+
+.divInputBoxSE input:checked + label {
+	border-color: #2563eb;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/*Imagenes para background*/
+
+.bg-internal-img {
+  background-image: url('../public/bcprice.jpg');
+}
+
+.bg-internal-img2 {
+  background-image: url('../public/bcgym.jpg');
+}
+
+.bg-internal-img3 {
+  background-image: url('../public/bannerindex.jpg');
+}
+
+.bg-internal-img4 {
+  background-image: url('../public/bcnosotros.jpg');
+}
+
+.bg-internal-img5 {
+  background-image: url('../public/bcsobrecarga.jpg');
+}
+
+.bg-internal-img6 {
+  background-image: url('../public/bcbilbo.jpg');
+}
+
+.bg-internal-img7{
+  background-image: url('../public/bgSE.jpg')
+}
+
+.textform{
+  resize: none;
+}
+
+/*CSS del modelo de los musculos*/
+
+.body-map {
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-map__container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.body-map__body {
+  height: 500px;
+}
+.body-map__model {
+  color: #000;
+}
+.body-map__muscle {
+  color: #CDCDCD;
+  transition: color 25ms ease-in-out;
+}
+.body-map__muscle:hover {
+  color: #3A65EE;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1324px) {
+  .body-map__body {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .body-map__body {
+    height: 450px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body-map__body {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .body-map__body {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .body-map__body {
+    height: 500px;
+  }
+}
+
+/*CSS del Tooltip (signos de admiracion en las respuestas del SE)*/
+
+/* Tooltip contenedor */
+.tooltip-local {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip-local .tooltiptext-local {
+  visibility: hidden;
+  width: 150px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+  font-size: small;
+  position:absolute;
+
+  /* Para posicionarlo arriba  */
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Hover para mostrarlo */
+.tooltip-content:hover .tooltiptext-local {
+  visibility: visible;
+}
+
+/*CSS del Tooltip de la calculadora de calorias/registros (signos de admiracion)*/
+
+/* Tooltip contenedor */
+.tooltip-localCalorias {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip-localCalorias .tooltiptext-localCalorias {
+  visibility: hidden;
+  width: 150px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+  font-size: small;
+  position:absolute;
+
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Hover para mostrarlo */
+.tooltip-contenedor:hover .tooltiptext-localCalorias {
+  visibility: visible;
+}
+
+@media screen and (max-width: 380px) {
+  .tooltip-localCalorias .tooltiptext-localCalorias {
+    top: 1px;
+    left: 500%;
+  }
+}
+
+/*CSS del Tooltip de la calculadora de calorias/grafica (signos de admiracion)*/
+
+/* Tooltip contenedor */
+.tooltip-localCaloriasGrafica {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip-localCaloriasGrafica .tooltiptext-localCaloriasGrafica {
+  visibility: hidden;
+  width: 150px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+  font-size: small;
+  position:absolute;
+
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Hover para mostrarlo */
+.tooltip-contenedorGrafica:hover .tooltiptext-localCaloriasGrafica {
+  visibility: visible;
+}
+
+
+
+/*CSS del progress bar*/
+
+
+
+ .CircularProgressbar {
+  
+  width: 100%;
+  vertical-align: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: #16a34a;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease 0s;
+}
+
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: #d6d6d6;
+  stroke-linecap: round;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+  fill: #2563eb;
+  font-size: 20px;
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+
+.CircularProgressbar .CircularProgressbar-background {
+  fill: #d6d6d6;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
+  fill: #3e98c7;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+  fill: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
+  stroke: #fff;
+}
+
+.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
+  stroke: transparent;
+}
+
+/*CSS de los checkbox para seleccionar los dias en el SE */
+
+.feature {
+  position: relative;
+  width: 140px;
+  height: 100px;
+  margin: 5px;
+  border: 2px solid #2563eb;
+  box-sizing: border-box;
+}
+
+.feature .divArticle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s ease;
+}
+
+.feature .inputArticle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 100px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.inputArticle[type=checkbox]:checked ~ .divArticle {
+  background-color: #2563eb;
+  color:white;
+}
+
+
+/*CSS de los checkbox para seleccionar las herramientas en el SE */
+
+.feature-2 {
+  position: relative;
+  width: 140px;
+  height: 150px;
+  margin: 5px;
+  border: 2px solid #2563eb;
+  box-sizing: border-box;
+}
+
+.feature-2 .divArticle-2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s ease;
+}
+
+.feature-2 .inputArticle-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 100px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.inputArticle-2[type=checkbox]:checked ~ .divArticle-2 {
+  background-color: #2563eb;
+  color:white;
+}
+
+
+
+
+/* Clases de los iconos SVG de las paginas sobrecarga y metodo bilbo */
+.svg-icon {
+  width: 2em;
+  height: 2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #4691f6;
+  stroke-width: 1;
+}
+
+
+/* Clases para el visualizador de progreso */
+
+.h-celdasVP{
+height: 28.5rem;
+}
+
+.h-celdaCalorias{
+  height: 22.5rem;
+}
+
+/* Clases para el modelo de los musculos del VP */
+
+.body-map2 {
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-map__container2 {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.body-map__body2 {
+  height: 240px;
+}
+.body-map__model2 {
+  color: #000;
+}
+.body-map__muscle2 {
+  color: #fff;
+  transition: color 25ms ease-in-out;
+}
+
+.body-map__muscle2_change {
+  color: #2563eb;
+  transition: color 25ms ease-in-out;
+}
+
+/* .body-map__muscle2:hover {
+  color: #3A65EE;
+  cursor: pointer;
+} */
+
+@media screen and (max-width: 640px) {
+  .body-map__body2 {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .body-map__body2 {
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .body-map__body2 {
+    height: 100px;
+  }
+}
+
+
+.bottonGuardarRut{
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.bottonGuardarRut:hover{
+  background-color: #174FFF;
+  box-shadow: 0px 15px 20px rgba(0, 49, 200, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.bottonGuardarRut:active {
+  transform: translateY(-1px);
+}
+
+/* Clases para la tabla generada por el SE */
+
+.chorizo{
+  display: block;
+  overflow-x: scroll;
+}
+
+.table-container {
+  overflow-x: auto;
+  max-width: 99%;
+}
+
+.table {
+  width: 100%;
+}
+
+
+/*  Clases de estilos de rutinaSE */
+
+@media screen and (max-width: 380px) {
+  .resp-text-se{
+    font-size: 1rem;
+  }
+  .resp-text-se2{
+    font-size: 1.2rem;
+  }
+}
+
+.sizeNombreE{
+  font-size: 15px;
+}
