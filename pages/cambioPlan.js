@@ -6,7 +6,7 @@ import PreciosCambio from "/components/CardsPrecioCambio";
 import { useRouter } from "next/router";
 import supabase from "/config/supabaseClient";
 import { useState, useEffect } from "react";
-import Typed from "react-typed";
+import { ReactTyped } from "react-typed";
 
 const plans = [
   {
@@ -117,7 +117,7 @@ export default function Home() {
             className="transparencia-banner opacity-80"
             src="bccambio.jpg"
           />
-          <Typed
+          <ReactTyped
             strings={[
               "Cambio de plan"
             ]}

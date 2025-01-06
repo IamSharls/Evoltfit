@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "/components/Navbar";
 import Footer from "/components/Footer";
-import Typed from "react-typed";
+import { ReactTyped } from "react-typed";
 import supabase from "../config/supabaseClient";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -34,7 +34,7 @@ export default function MetodoBilbo() {
                   </p>
                 </div>
                 <div className="lg:w-1/2 lg:mx-6">
-                  <Typed
+                  <ReactTyped
                     strings={["Método Bilbo"]}
                     typeSpeed={150}
                     backSpeed={100}

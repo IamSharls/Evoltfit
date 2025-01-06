@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "/components/Navbar";
 import Footer from "/components/Footer";
-import Typed from "react-typed";
+import { ReactTyped } from "react-typed";
 import { useEffect } from "react";
 
 export default function MetodoSobrecarga() {
@@ -32,7 +32,7 @@ export default function MetodoSobrecarga() {
                   </p>
                 </div>
                 <div className="lg:w-1/2 lg:mx-6">
-                  <Typed
+                  <ReactTyped
                     strings={["Sobrecarga progresiva"]}
                     typeSpeed={150}
                     backSpeed={100}

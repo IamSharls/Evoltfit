@@ -3,7 +3,7 @@ import Navbar from "/components/Navbar";
 import Footer from "/components/Footer";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import Typed from "react-typed";
+import { ReactTyped } from "react-typed";
 
 export default function Nosotros() {
   const router = useRouter();
@@ -30,7 +30,7 @@ export default function Nosotros() {
 
         <section className = "bg-cover bg-internal-img4">
           <div className = "flex flex-col min-h-screen">
-          <Typed
+          <ReactTyped
             strings={[
               "Accesible",
               "Centralizado",
