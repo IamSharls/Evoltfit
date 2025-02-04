@@ -9,7 +9,7 @@ Los usuarios pueden llevar un registro de su progreso, sus calorias consumidas y
 
 Tecnologías usadas: React.js, Next.js, TailwindCSS, Supabase, Git
 
-<h3><a target='_blank' style = "text-decoration:none" href = "https://evoltfit-app.vercel.app/">Visita Evoltfit</a></h3>
+<h3><a target='_blank' style = "text-decoration:none" href = "https://evoltfit.vercel.app/">Visita Evoltfit</a></h3>
 
 ## Miembros del equipo
 
